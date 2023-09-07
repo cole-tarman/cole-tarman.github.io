@@ -2,3 +2,5 @@ Title: Cole Tarman
 remote_theme: http[s]://github.<Enterprise>.com/benbalter/retlab
 plugins:
   - jekyll-remote-theme
+url: "https://billraymond.github.io"
+baseurl: "/ParticleGround-Portfolio-master"
