@@ -43,19 +43,12 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-}
 
 .page-container {
     display: flex;
     flex-direction: row;
     width: 300%; /* Width of all pages combined */
     height: 100vh;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
     scroll-behavior: smooth;
 }
 
