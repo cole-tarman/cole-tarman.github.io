@@ -62,11 +62,18 @@ html, body {
     background-color: #f0f0f0;
 }
 .scroll-bar {
-height: 100%;
-width: 100%;
-border:1px solid grey;
-overflow:auto;
+    overflow: hidden;
+    height: 100px;
+    width: 200px;
+    border: 1px solid #ccc; /* Optional border */
 }
+
+.divScroll {
+    overflow: auto;
+    height: 100%; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
+}
+
 body {
   background: #000010;
   font-family: 'Montserrat', sans-serif;
