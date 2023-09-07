@@ -8,6 +8,12 @@ const scrollThumb = document.createElement('div');
 scrollThumb.className = 'scroll-thumb';
 scrollbar.appendChild(scrollThumb);
 
+const divScroll = document.querySelector('.divScroll');
+
+divScroll.addEventListener('scroll', () => {
+    // Add your scrolling behavior here
+    console.log('Scrolling...');
+
 function updateScrollbar() {
     const contentHeight = content.clientHeight;
     const containerHeight = scrollContainer.clientHeight;
