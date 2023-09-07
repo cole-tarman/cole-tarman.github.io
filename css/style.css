@@ -61,7 +61,12 @@ html, body {
     font-size: 2em;
     background-color: #f0f0f0;
 }
-
+.scroll-bar {
+height: 100%;
+width: 100%;
+border:1px solid grey;
+overflow:auto;
+}
 body {
   background: #000010;
   font-family: 'Montserrat', sans-serif;
