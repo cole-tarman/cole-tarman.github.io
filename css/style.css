@@ -43,6 +43,31 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+    width: 300%; /* Width of all pages combined */
+    height: 100vh;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-behavior: smooth;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: #f0f0f0;
+}
 
 body {
   background: #000010;
