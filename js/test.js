@@ -1,41 +1,42 @@
+const scrollContainer = document.getElementById('scrollContainer');
+const content = document.getElementById('content');
+const scrollbar = document.createElement('div');
+scrollbar.className = 'scrollbar';
+scrollContainer.appendChild(scrollbar);
 
-//Responsive Nav
-$(function() {
-	menu = $('nav ul');
+const scrollThumb = document.createElement('div');
+scrollThumb.className = 'scroll-thumb';
+scrollbar.appendChild(scrollThumb);
 
-  $('#openup').on('click', function(e) {
-    e.preventDefault(); menu.slideToggle();
-  });
-  
-  $(window).resize(function(){
-    var w = $(this).width(); if(w > 480 && menu.is(':hidden')) {
-      menu.removeAttr('style');
+function updateScrollbar() {
+    const contentHeight = content.clientHeight;
+    const containerHeight = scrollContainer.clientHeight;
+    const scrollableHeight = contentHeight - containerHeight;
+
+    const scrollPercent = (scrollContainer.scrollTop / scrollableHeight) * 100;
+    scrollThumb.style.height = scrollPercent + '%';
+}
+
+scrollContainer.addEventListener('scroll', updateScrollbar);
+
+scrollThumb.addEventListener('mousedown', (e) => {
+    const startY = e.clientY;
+    const startScrollTop = scrollContainer.scrollTop;
+
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+
+    function onMouseMove(e) {
+        const deltaY = e.clientY - startY;
+        const scrollableHeight = content.clientHeight - scrollContainer.clientHeight;
+        const scrollY = (startScrollTop + deltaY) * (scrollableHeight / scrollContainer.clientHeight);
+        scrollContainer.scrollTop = scrollY;
     }
-  });
-  
-  $('nav li').on('click', function(e) {                
-    var w = $(window).width(); if(w < 480 ) {
-      menu.slideToggle(); 
+
+    function onMouseUp() {
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
     }
-  });
-  $('.open-menu').height($(window).height());
 });
 
-// Smooth Scrolling
-$('.cf a').on('click', function(event) {
-    if (this.hash !== '') {
-      event.preventDefault();
-  
-      const hash = this.hash;
-  
-      $('html, body').animate(
-        {
-          scrollTop: $(hash).offset().top
-        },
-        800,
-        function() {
-          window.location.hash = hash;
-        }
-      );
-    }
-  });
+updateScrollbar(); // Initial scrollbar position
