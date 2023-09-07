@@ -1,65 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-  <base target="_blank">
-  <meta charset="UTF-8" />
-  <title>Cole Tarman</title>
-  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
-  <style>
-    .divScroll {
-overflow:scroll;
-height:100px;
-width:200px;
-    }
-  </style>
-</head>
-<head>
-    <meta charset="UTF-8">
+    <base target="_blank">
+    <meta charset="UTF-8" />
+    <title>Cole Tarman</title>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
+    <script type="text/javascript" src="js/jquery.particleground.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    <style>
+        .scroll-bar {
+            overflow: hidden;
+            height: 100px;
+            width: 200px;
+            border: 1px solid #ccc; /* Optional border */
+        }
+
+        .divScroll {
+            overflow: auto; /* Enable scrolling */
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <div id="particles">
+        <div id="intro">
+            <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">Cole Tarman&nbsp<a href="deedy.pdf" style="color: white;"><img src="https://png.icons8.com/office/40/000000/open-resume.png" height="35" width="35"></a></h2>
+            <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
+            <a href="https://www.linkedin.com/in/#/" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
+            &nbsp
+            <a href="https://www.facebook.com/#/" style="color: white;"><i class="fab fa-facebook" style="font-size: 2em;"></i></a>
+            &nbsp
+            <a href="https://github.com/#/" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
+            &nbsp
+            <a href="https://medium.com/@#/" style="color: white;"><i class="fab fa-medium" style="font-size: 2em;"></i></a>
+        </div>
+    </div>
 
-<div id="particles">
-  <div id="intro">
-      <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">Cole Tarman&nbsp<a href="deedy.pdf" style="color: white;"><img src="https://png.icons8.com/office/40/000000/open-resume.png" height="35" width="35"></a></h2>
-        <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
-    <a href="https://www.linkedin.com/in/#/" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://www.facebook.com/#/" style="color: white;"><i class="fab fa-facebook" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://github.com/#/" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://medium.com/@#/" style="color: white;"><i class="fab fa-medium" style="font-size: 2em;"></i></a>
-  </div class = "divScroll">
-     <h3>About Me</h3>
-    <p>
-        Hi, I'm Cole Tarman! I'm a web developer with a passion for creating amazing web experiences.
-        I love to code, design, and build awesome websites.
-    </p>
+    <div class="scroll-bar">
+        <div class="divScroll">
+            <!-- Add your content here -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at velit odio.</p>
+            <!-- More content... -->
+        </div>
+    </div>
 
-    <h3>Skills</h3>
-    <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-    </ul>
-
-    <h3>Contact</h3>
-    <p>
-        Feel free to reach out to me on social media or via email at cole@example.com.
-    </p>
-</div>
-
-<script src="test.js"></script>
+    <script src="test.js"></script>
 </body>
 </html>
