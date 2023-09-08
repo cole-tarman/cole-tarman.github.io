@@ -1,22 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;  
-}
-
-.page {
-  width: 100vw;
-  height: 100vh;
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  font-size: 2rem;
-}
-
 /* Style navigation buttons */
 .nav-buttons {
   position: absolute;
@@ -70,7 +51,7 @@ table {
 html, body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  
 }
 
 body {
@@ -79,8 +60,7 @@ body {
   color: #fff;
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  
 }
 
 #particles {
@@ -160,4 +140,6 @@ p {
     height: 4px;
   }
 }
+
+
 
