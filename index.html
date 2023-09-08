@@ -11,6 +11,7 @@
             width: 400%; /* Set the width to accommodate all pages (4 pages in this example) */
             overflow-x: hidden; /* Hide horizontal scrollbar */
             white-space: nowrap; /* Prevent line breaks within the container */
+            transition: transform 0.5s ease; /* Add smooth transition for page switching */
         }
 
         section {
@@ -19,7 +20,6 @@
             height: 100vh; /* Each section takes up the full viewport height */
             text-align: center;
             font-size: 2rem;
-            background-color: #f0f0f0;
         }
 
         /* Customize each section */
@@ -37,6 +37,23 @@
 
         section:nth-child(4) {
             background-color: #c0c0f0; /* Page 4 background color */
+        }
+
+        /* Add buttons for page navigation */
+        .nav-buttons {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -58,6 +75,14 @@
         <!-- Add content for Page 4 -->
     </section>
 
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+        <button onclick="scrollToPage(1)">Page 1</button>
+        <button onclick="scrollToPage(2)">Page 2</button>
+        <button onclick="scrollToPage(3)">Page 3</button>
+        <button onclick="scrollToPage(4)">Page 4</button>
+    </div>
+
     <script>
         // Enable horizontal scrolling with the mouse wheel
         document.addEventListener("wheel", (event) => {
@@ -67,6 +92,13 @@
                 event.preventDefault();
             }
         });
+
+        // Function to scroll to a specific page
+        function scrollToPage(pageNumber) {
+            const sectionWidth = window.innerWidth;
+            const targetX = (pageNumber - 1) * sectionWidth;
+            document.body.style.transform = `translateX(-${targetX}px)`;
+        }
     </script>
 </body>
 </html>
