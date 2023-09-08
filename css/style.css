@@ -1,52 +1,163 @@
-/* Add your CSS styles here */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;  
+}
 
-/* Apply basic styling for pages */
 .page {
-    width: 100vw;
-    height: 100vh;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    font-size: 2rem;
-}
-
-/* Hide vertical scrollbar */
-body {
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-/* Style the animated background */
-.animated-background {
-    /* Add your animated background styles here */
-    width: 400%; /* Set the width to accommodate all pages */
-    animation: scrollAnimation 20s linear infinite; /* Horizontal scrolling animation */
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
 }
 
 /* Style navigation buttons */
 .nav-buttons {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-}
 
 /* Horizontal scrolling animation keyframes */
 @keyframes scrollAnimation {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-300%); /* Adjust as needed to match the number of pages */
-    }
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-300%); /* Adjust as needed to match the number of pages */
+  }
 }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* particleground demo */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #000010;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#particles {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#intro {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  padding: 0 10px;
+  width: 100%;
+  text-align: center;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 120;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+h1::after {
+  content: '';
+  width: 80px;
+  display: block;
+  background: #fff;
+  height: 10px;
+  margin: 30px auto;
+  line-height: 1.1;
+}
+p {
+  margin: 0 0 30px 0;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 100px) {
+  h1 {
+    font-size: 15px;
+  }
+  h1::after {
+    height: 8px;
+  }
+}
+
+@media only screen and (max-width: 100px) {
+  #intro {
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  h1::after {
+    height: 6px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 100px) {
+  h1 {
+    font-size: 15px;
+  }
+  h1::after {
+    height: 4px;
+  }
+}
+
