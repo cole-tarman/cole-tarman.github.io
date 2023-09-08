@@ -11,9 +11,17 @@
     font-size: 2rem;
 }
 
+/* Hide vertical scrollbar */
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 /* Style the animated background */
 .animated-background {
     /* Add your animated background styles here */
+    width: 400%; /* Set the width to accommodate all pages */
+    animation: scrollAnimation 20s linear infinite; /* Horizontal scrolling animation */
 }
 
 /* Style navigation buttons */
@@ -31,4 +39,14 @@ button {
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
+}
+
+/* Horizontal scrolling animation keyframes */
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-300%); /* Adjust as needed to match the number of pages */
+    }
 }
