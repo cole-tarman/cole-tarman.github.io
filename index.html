@@ -20,6 +20,7 @@
             height: 100vh; /* Each section takes up the full viewport height */
             text-align: center;
             font-size: 2rem;
+            position: relative; /* Make the section a relative positioning context for the buttons */
         }
 
         /* Customize each section */
@@ -41,10 +42,10 @@
 
         /* Add buttons for page navigation */
         .nav-buttons {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
+            position: absolute; /* Position the buttons absolutely within each section */
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         button {
@@ -61,27 +62,43 @@
     <section>
         <h1>Page 1</h1>
         <!-- Add content for Page 1 -->
+        <div class="nav-buttons">
+            <button onclick="scrollToPage(1)">Page 1</button>
+            <button onclick="scrollToPage(2)">Page 2</button>
+            <button onclick="scrollToPage(3)">Page 3</button>
+            <button onclick="scrollToPage(4)">Page 4</button>
+        </div>
     </section>
     <section>
         <h1>Page 2</h1>
         <!-- Add content for Page 2 -->
+        <div class="nav-buttons">
+            <button onclick="scrollToPage(1)">Page 1</button>
+            <button onclick="scrollToPage(2)">Page 2</button>
+            <button onclick="scrollToPage(3)">Page 3</button>
+            <button onclick="scrollToPage(4)">Page 4</button>
+        </div>
     </section>
     <section>
         <h1>Page 3</h1>
         <!-- Add content for Page 3 -->
+        <div class="nav-buttons">
+            <button onclick="scrollToPage(1)">Page 1</button>
+            <button onclick="scrollToPage(2)">Page 2</button>
+            <button onclick="scrollToPage(3)">Page 3</button>
+            <button onclick="scrollToPage(4)">Page 4</button>
+        </div>
     </section>
     <section>
         <h1>Page 4</h1>
         <!-- Add content for Page 4 -->
+        <div class="nav-buttons">
+            <button onclick="scrollToPage(1)">Page 1</button>
+            <button onclick="scrollToPage(2)">Page 2</button>
+            <button onclick="scrollToPage(3)">Page 3</button>
+            <button onclick="scrollToPage(4)">Page 4</button>
+        </div>
     </section>
-
-    <!-- Navigation buttons -->
-    <div class="nav-buttons">
-        <button onclick="scrollToPage(1)">Page 1</button>
-        <button onclick="scrollToPage(2)">Page 2</button>
-        <button onclick="scrollToPage(3)">Page 3</button>
-        <button onclick="scrollToPage(4)">Page 4</button>
-    </div>
 
     <script>
         // Enable horizontal scrolling with the mouse wheel
