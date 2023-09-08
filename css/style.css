@@ -1,37 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Portfolio</title>
-    <link rel="icon" href="icons/Logo_Small.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="src/styles/style.css">
-</head>
-<body>
-    <section class="page" id="page1">
-        <div class="animated-background">
-            <!-- Add your animated background content here -->
-        </div>
-        <div class="nav-buttons">
-            <button onclick="scrollToPage(1)">Page 1</button>
-            <button onclick="scrollToPage(2)">Page 2</button>
-            <button onclick="scrollToPage(3)">Page 3</button>
-            <button onclick="scrollToPage(4)">Page 4</button>
-        </div>
-    </section>
-    <section class="page" id="page2">
-        <h1>Page 2</h1>
-        <!-- Add content for Page 2 -->
-    </section>
-    <section class="page" id="page3">
-        <h1>Page 3</h1>
-        <!-- Add content for Page 3 -->
-    </section>
-    <section class="page" id="page4">
-        <h1>Page 4</h1>
-        <!-- Add content for Page 4 -->
-    </section>
-    <script src="js/script.js"></script>
-</body>
-</html>
+/* Add your CSS styles here */
 
+/* Apply basic styling for pages */
+.page {
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Style the animated background */
+.animated-background {
+    /* Add your animated background styles here */
+}
+
+/* Style navigation buttons */
+.nav-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
