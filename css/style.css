@@ -129,3 +129,23 @@ p {
     height: 4px;
   }
 }
+/* -------------------- --------------- -------------------- */
+/* -------------------- Sidebar Seciton -------------------- */
+/* -------------------- --------------- -------------------- */
+#sidebar {
+	position:fixed;
+	top:200px;
+	right:0;
+	height:229px;
+	width:64px;
+	border-radius:5px 0px 0px 5px;
+	background-color:black;
+	z-index:2;
+	-webkit-transition:right 1s;
+	transition:right 1s;
+}
+.sidebarIcon {
+	margin:7px 7px 0px 7px;
+	width:50px;
+}
+
