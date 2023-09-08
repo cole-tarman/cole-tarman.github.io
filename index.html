@@ -12,6 +12,7 @@
             overflow-x: hidden; /* Hide horizontal scrollbar */
             white-space: nowrap; /* Prevent line breaks within the container */
             transition: transform 0.5s ease; /* Add smooth transition for page switching */
+            background-color: #f0f0f0; /* Set the background color to match your page background color */
         }
 
         section {
@@ -25,21 +26,19 @@
 
         /* Customize each section */
         section:nth-child(1) {
-            background-color: #f0f0f0; /* Page 1 background color */
-            /* Add animation to Page 1 */
-            animation: slideIn 1s ease-in-out;
+            background-color: #000000; /* Page 1 background color */
         }
 
         section:nth-child(2) {
-            background-color: #e0e0f0; /* Page 2 background color */
+            background-color: #f0f0f0; /* Page 2 background color */
         }
 
         section:nth-child(3) {
-            background-color: #d0d0f0; /* Page 3 background color */
+            background-color: #f0f0f0; /* Page 3 background color */
         }
 
         section:nth-child(4) {
-            background-color: #c0c0f0; /* Page 4 background color */
+            background-color: #f0f0f0; /* Page 4 background color */
         }
 
         /* Add buttons for page navigation */
@@ -58,43 +57,42 @@
             margin: 0 10px;
             cursor: pointer;
         }
-
-        /* Animation for Page 1 */
-        @keyframes slideIn {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 <body>
-    <section>
-        <div id="particles">
-            <div id="intro">
-                <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">Anon Developer&nbsp<a href="deedy.pdf" style="color: white;"><img src="https://png.icons8.com/office/40/000000/open-resume.png" height="35" width="35"></a></h2>
-                <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
-                <a href="https://www.linkedin.com/in/#/" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-                &nbsp
-                <a href="https://www.facebook.com/#/" style="color: white;"><i class="fab fa-facebook" style="font-size: 2em;"></i></a>
-                &nbsp
-                <a href="https://github.com/#/" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
-                &nbsp
-                <a href="https://medium.com/@#/" style="color: white;"><i class="fab fa-medium" style="font-size: 2em;"></i></a>
-            </div>
+  <section class="page" id="page1">
+    
+    <title>Anon Developer</title>
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
+    <script type="text/javascript" src="js/jquery.particleground.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    
+    <div id="particles">
+        <div id="intro">
+            <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">Anon Developer&nbsp<a href="deedy.pdf" style="color: white;"><img src="https://png.icons8.com/office/40/000000/open-resume.png" height="35" width="35"></a></h2>
+            <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
+            <a href="https://www.linkedin.com/in/#/" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
+            &nbsp
+            <a href="https://www.facebook.com/#/" style="color: white;"><i class="fab fa-facebook" style="font-size: 2em;"></i></a>
+            &nbsp
+            <a href="https://github.com/#/" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
+            &nbsp
+            <a href="https://medium.com/@#/" style="color: white;"><i class="fab fa-medium" style="font-size: 2em;"></i></a>
         </div>
-        <!-- Add content for Page 1 -->
-        <div class="nav-buttons">
-            <button onclick="scrollToPage(1)">Page 1</button>
-            <button onclick="scrollToPage(2)">Page 2</button>
-            <button onclick="scrollToPage(3)">Page 3</button>
-            <button onclick="scrollToPage(4)">Page 4</button>
-        </div>
-    </section>
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="scrollToPage(1)">Page 1</button>
+        <button onclick="scrollToPage(2)">Page 2</button>
+        <button onclick="scrollToPage(3)">Page 3</button>
+        <button onclick="scrollToPage(4)">Page 4</button>
+    </div>
+</section>
     <section>
-        <h1>Page 2</h1>
+        <h1 style="color: #f0f0f0;">Page 2 </h1>
         <!-- Add content for Page 2 -->
         <div class="nav-buttons">
             <button onclick="scrollToPage(1)">Page 1</button>
