@@ -300,9 +300,11 @@ a {
 /* -------------------- Intro Seciton -------------------- */
 /* -------------------- ------------- -------------------- */
 #intro {
-	position:fixed;
-	background:#0A0A0A url("img/Drexel_MainBuilding.png") no-repeat center center;
-	background-size:cover;
+	background: #000010;
+ 	font-family: 'Montserrat', sans-serif;
+  	color: #fff;
+  	line-height: 1.3;
+  	-webkit-font-smoothing: antialiased;
 }
 #logo {
 	position:absolute;
