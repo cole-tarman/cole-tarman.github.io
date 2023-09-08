@@ -1,71 +1,61 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <base target="_blank">
-  <meta charset="UTF-8" />
-  <title>Anon Developer</title>
-  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
-  
-  <style>
-    /* Add horizontal scrolling */
-    body {
-      overflow-x: auto;
-      white-space: nowrap;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 400%; /* Set the width to accommodate all pages (4 pages in this example) */
+            overflow-x: scroll; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent line breaks within the container */
+        }
 
-    /* Style the scrolling container */
-    #particles {
-      display: inline-block;
-      padding: 20px; /* Add some padding to prevent content from sticking to the edges */
-    }
+        section {
+            display: inline-block;
+            width: 100vw; /* Each section takes up the full viewport width */
+            height: 100vh; /* Each section takes up the full viewport height */
+            text-align: center;
+            font-size: 2rem;
+            background-color: #f0f0f0;
+        }
 
-    /* Style the content within the scrolling container */
-    #intro {
-      font-family: 'Syncopate', sans-serif;
-      font-weight: 10;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
-      vertical-align: top;
-    }
+        /* Customize each section */
+        section:nth-child(1) {
+            background-color: #f0f0f0; /* Page 1 background color */
+        }
 
-    /* Style the horizontal line */
-    hr {
-      width: 50%;
-      background-color: #E83951;
-      border-color: #E83951;
-    }
+        section:nth-child(2) {
+            background-color: #e0e0e0; /* Page 2 background color */
+        }
 
-    /* Style the social media icons */
-    .social-icon {
-      color: white;
-      font-size: 2em;
-      text-decoration: none;
-      margin-right: 10px;
-    }
-  </style>
+        section:nth-child(3) {
+            background-color: #d0d0d0; /* Page 3 background color */
+        }
+
+        section:nth-child(4) {
+            background-color: #c0c0c0; /* Page 4 background color */
+        }
+    </style>
 </head>
-
 <body>
-  <!-- Horizontal scrolling content -->
-  <div id="particles">
-    <div id="intro">
-      <h2>Anon Developer <a href="deedy.pdf" class="social-icon"><img src="https://png.icons8.com/office/40/000000/open-resume.png" height="35" width="35"></a></h2>
-      <hr>
-      <a href="https://www.linkedin.com/in/#/" class="social-icon"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.facebook.com/#/" class="social-icon"><i class="fab fa-facebook"></i></a>
-      <a href="https://github.com/#/" class="social-icon"><i class="fab fa-github"></i></a>
-      <a href="https://medium.com/@#/" class="social-icon"><i class="fab fa-medium"></i></a>
-    </div>
-  </div>
+    <section>
+        <h1>Page 1</h1>
+        <!-- Add content for Page 1 -->
+    </section>
+    <section>
+        <h1>Page 2</h1>
+        <!-- Add content for Page 2 -->
+    </section>
+    <section>
+        <h1>Page 3</h1>
+        <!-- Add content for Page 3 -->
+    </section>
+    <section>
+        <h1>Page 4</h1>
+        <!-- Add content for Page 4 -->
+    </section>
 </body>
 </html>
