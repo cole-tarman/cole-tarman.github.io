@@ -148,19 +148,7 @@ function adjustVideoSize_Page1(windowWidth) {
 		});
 	}
 }
-function toggleSidebarDisplay() {
-	if (sidebarDisplayFlag == 0) {
-		$("#sidebar").css({
-			"right":"-64px"
-		});
-	} else if (sidebarDisplayFlag == 1) {
-		$("#sidebar").css({
-			"right":""
-		});
-	} else {
-		alert("Error (3): Flag was set to incorrect value.");
-	}
-}
+
 function displayPageName(index) {
 	var pageName;
 	pageName = pageNames[index];
@@ -203,105 +191,6 @@ $(".footerButton").hover(
 		displayPageName($(this).index());
 	}, function() {
 		displayPageName(pageIndex);
-	}
-);
-$(".platform").hover(
-	function() {
-		var windowWidth = $(window).width();
-		var sidebarWidth = $("#sidebar").width();
-		var platformPosition = $(this).position().left + $(this).width();
-
-		if (platformPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-			sidebarDisplayFlag = 0;
-			toggleSidebarDisplay();
-		}
-
-		var platformIndex = $(this).index() - platformIndexAdjust;
-		$(".background").eq(platformIndex).css({
-			"opacity":"0.2"
-		});
-		$(".platformDescription").eq(platformIndex).css({
-			"opacity":"1"
-		});
-	}, function() {
-		if (sidebarDisplayFlag == 0) {
-			sidebarDisplayFlag = 1;
-			toggleSidebarDisplay();
-		}
-
-		var platformIndex = $(this).index() - platformIndexAdjust;
-		$(".background").eq(platformIndex).css({
-			"opacity":""
-		});
-		$(".platformDescription").eq(platformIndex).css({
-			"opacity":""
-		});
-	}
-);
-$(".job").hover(
-	function() {
-		var windowWidth = $(window).width();
-		var sidebarWidth = $("#sidebar").width();
-		var jobPosition = $(this).position().left + $(this).width();
-
-		if (jobPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-			sidebarDisplayFlag = 0;
-			toggleSidebarDisplay();
-		}
-
-		var jobIndex = $(this).index() - jobIndexAdjust;
-		$(".background").eq(jobIndex + $(".platform").length).css({
-			"opacity":"0.2"
-		});
-		$(".jobDescription").eq(jobIndex).css({
-			"opacity":"1"
-		});
-	}, function() {
-		if (sidebarDisplayFlag == 0) {
-			sidebarDisplayFlag = 1;
-			toggleSidebarDisplay();
-		}
-
-		var jobIndex = $(this).index() - jobIndexAdjust;
-		$(".background").eq(jobIndex + $(".platform").length).css({
-			"opacity":""
-		});
-		$(".jobDescription").eq(jobIndex).css({
-			"opacity":""
-		});
-	}
-);
-$(".project").hover(
-	function() {
-		var windowWidth = $(window).width();
-		var sidebarWidth = $("#sidebar").width();
-		var projectPosition = $(this).position().left + $(this).width();
-
-		if (projectPosition > (windowWidth - sidebarWidth - sidebarDisplayTolerance)) {
-			sidebarDisplayFlag = 0;
-			toggleSidebarDisplay();
-		}
-
-		var projectIndex = $(this).index() - projectIndexAdjust;
-		$(".background").eq(projectIndex + $(".platform").length + $(".job").length).css({
-			"opacity":"0.2"
-		});
-		$(".projectDescription").eq(projectIndex).css({
-			"opacity":"1"
-		});
-	}, function() {
-		if (sidebarDisplayFlag == 0) {
-			sidebarDisplayFlag = 1;
-			toggleSidebarDisplay();
-		}
-
-		var projectIndex = $(this).index() - projectIndexAdjust;
-		$(".background").eq(projectIndex + $(".platform").length + $(".job").length).css({
-			"opacity":""
-		});
-		$(".projectDescription").eq(projectIndex).css({
-			"opacity":""
-		});
 	}
 );
 

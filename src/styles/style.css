@@ -74,9 +74,9 @@ a {
 }
 
 .icon img {
-    width: 48px; /* Adjust the size of the icon as needed */
-    height: 48px;
-    margin-bottom: 10px; /* Space between icon and text */
+    width: 72px; /* Adjust the size of the icon as needed */
+    height: 72px;
+    margin-bottom: 2px; /* Space between icon and text */
 }
 .center-content {
     text-align: center;
@@ -87,7 +87,8 @@ a {
 }
 
 .name {
-    font-size: 36px;
+    font-size: 90px;
+	color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -235,13 +236,38 @@ a {
 /* -------------------- -------------------- -------------------- */
 #intro{
 	position: fixed;
-	background:#ffffff url("img/drake.png") no-repeat center center;
+	background:#ffffff url("img/5040007.jpg") no-repeat center center;
 	background-size: cover
 }
 #page1 {
-	position: fixed;
-	background:#ffffff no-repeat center center;
-	background-size: cover
+    background-color: #f0f0f0; /* Set the background color for the second page */
+    color: #333; /* Set the text color for the second page */
+    text-align: center;
+    padding: 20px; /* Add padding to the whole section */
+    border-radius: 20px; /* Rounded corners for the section */
+}
+#contentPage1 {
+    padding: 20px; /* Add padding to the content for spacing */
+}
+#page1 h2 {
+    font-size: 72px;
+    margin-bottom: 20px;
+    background-color: #007bff; /* Background color for the title */
+    color: #fff; /* Text color for the title */
+    padding: 10px 20px; /* Padding for the title */
+    border-radius: 10px; /* Rounded corners for the title */
+    display: inline-block; /* Keep the title background contained within the text width */
+}
+#page1 .text-container {
+    background-color: #fff; /* Background color for the text container */
+    padding: 20px; /* Padding for the text container */
+    border-radius: 10px; /* Rounded corners for the text container */
+    margin: 10px 0; /* Add margin to separate paragraphs */
+}
+#page1 p {
+    font-size: 48px;
+    background-color: #fff; /* Background color for the text */
+    border-radius: 10px; /* Rounded corners for the text */
 }
 #page2 {
 	background:#ffffff no-repeat center center;
@@ -255,28 +281,6 @@ a {
 #page1, #page2, #page3, #page4 {
 	height:100%;
 	background-size:cover;
-}
-#tint1 {
-	background:-webkit-linear-gradient(141deg,rgba(15,184,173,0.8) 0%,rgba(31,200,219,0.8) 51%,rgba(44,181,232,0.8) 75%);
-	background:linear-gradient(141deg,rgba(15,184,173,0.8) 0%,rgba(31,200,219,0.8) 51%,rgba(44,181,232,0.8) 75%);
-}
-#tint2 {
-	background:-webkit-linear-gradient(141deg,rgba(44,181,232,0.8),rgba(95,44,130,0.8));
-	background:linear-gradient(141deg,rgba(44,181,232,0.8),rgba(95,44,130,0.8));
-}
-#tint3 {
-	background:-webkit-linear-gradient(141deg,rgba(95,44,130,0.8),rgba(236,111,102,0.8));
-	background:linear-gradient(141deg,rgba(95,44,130,0.8),rgba(236,111,102,0.8));
-}
-#tint4 {
-	background:-webkit-linear-gradient(141deg,rgba(0,0,0,0.95),rgba(0,0,0,0.4));
-	background:linear-gradient(141deg,rgba(0,0,0,0.95),rgba(0,0,0,0.4));
-}
-#tint1, #tine2, #tint3, #tint4 {
-	position:absolute;
-	height:100%;
-	width:100%;
-	-webkit-backface-visibility:hidden;
 }
 #contentPage1, #contentPage2, #contentPage3, #contentPage4 {
 	position:relative;
@@ -301,9 +305,6 @@ a {
 	transition:all 0.5s;
 }
 
-
-
-
 /* -------------------- ------------------------ -------------------- */
 /* -------------------- General Block Properties -------------------- */
 /* -------------------- ------------------------ -------------------- */
@@ -314,5 +315,40 @@ a {
 	color:rgba(232,232,232,0.9);
 }
 
+/* -------------------- ------------------------ -------------------- */
+/* -------------------- Project page Image Grid --------------------- */
+/* -------------------- ------------------------ -------------------- */
 
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
 
+.title {
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+/* Create a grid for the images */
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+
+.image-item {
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.image-item img {
+	max-width: 100%;
+	height: auto;
+	transition: transform 0.3s ease-in-out;
+}
+
+.image-item img:hover {
+	transform: scale(1.1);
+}
